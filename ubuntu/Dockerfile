@@ -91,7 +91,7 @@ COPY --from=builder /root/.tflint.hcl /root/
 COPY --from=builder /usr/local/bin/ /usr/local/bin/
 COPY --from=builder /usr/local/google-cloud-sdk/ /usr/local/google-cloud-sdk/
 RUN /bin/bash -c 'terraform --version'
-RUN echo $'\n\
+RUN echo '\n\
 if [ -f "/usr/local/google-cloud-sdk/path.bash.inc" ]; then . "/usr/local/google-cloud-sdk/path.bash.inc"; fi\n\
 if [ -f "/usr/local/google-cloud-sdk/completion.bash.inc" ]; then . "/usr/local/google-cloud-sdk/completion.bash.inc"; fi' >> /root/.bashrc
 
