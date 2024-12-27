@@ -3,21 +3,17 @@
   <p>Terraform Google Docker image</p>
   <p>
     <!-- Build Status -->
-    <a href="https://actions-badge.atrox.dev/hansohn/terraform-google-docker/goto?ref=main">
-      <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fhansohn%2Fterraform-google-docker%2Fbadge%3Fref%3Dmain&style=for-the-badge">
-    </a>
+    <a style="text-decoration:none;" class="imageLink" href="https://github.com/hansohn/terraform-aws-docker/actions/workflows/docker.yml">
+      <img src="https://img.shields.io/github/actions/workflow/status/hansohn/terraform-google-docker/docker.yml?style=for-the-badge"></a>
     <!-- Github Tag -->
-    <a href="https://gitHub.com/hansohn/terraform-google-docker/tags/">
-      <img src="https://img.shields.io/github/tag/hansohn/terraform-google-docker.svg?style=for-the-badge">
-    </a>
+    <a style="text-decoration:none;" class="imageLink" href="https://gitHub.com/hansohn/terraform-google-docker/tags/">
+      <img src="https://img.shields.io/github/tag/hansohn/terraform-google-docker.svg?style=for-the-badge"></a>
     <!-- License -->
-    <a href="https://github.com/hansohn/terraform-google-docker/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/hansohn/terraform-google-docker.svg?style=for-the-badge">
-    </a>
+    <a style="text-decoration:none;" class="imageLink" href="https://github.com/hansohn/terraform-google-docker/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/hansohn/terraform-google-docker.svg?style=for-the-badge"></a>
     <!-- LinkedIn -->
-    <a href="https://linkedin.com/in/ryanhansohn">
-      <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555">
-    </a>
+    <a style="text-decoration:none;" class="imageLink" href="https://linkedin.com/in/ryanhansohn">
+      <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555"></a>
   </p>
 </div>
 
@@ -60,7 +56,7 @@ Published images can be run using the following syntax
 
 ```
 # run latest published version
-$ docker run -it --rm hansohn/terraform-digitalocean:latest /bin/bash
+docker run -it --rm hansohn/terraform-google:latest /bin/bash
 ```
 
 Local images can be built and run using the following syntax
@@ -99,10 +95,6 @@ matches your specific needs. Versions can be pinned by defining any of the follo
 environment variables with the desired version.
 
 - TERRAFORM_VERSION
-- TERRAGRUNT_VERSION
-- TERRAFORM_DOCS_VERSION
-- TFLINT_VERSION
-- TFSEC_VERSION
 
 ```bash
 # example
@@ -110,16 +102,4 @@ $ TERRAFORM_VERSION=0.15.5 make docker/build
 
 # example with logs pipped to console
 $ DOCKER_BUILDKIT=0 TERRAFORM_VERSION=0.15.5 make docker/build
-```
-
-#### Distros
-
-Currently, only Debian images are built and published to Docker Hub. Dockerfiles
-for both Alpine and Ubuntu distributions have also been included and can be built
-ad-hoc by setting the `DOCKER_BUILD_PATH` environment variable to target either
-of these alternative distro builds.
-
-```
-# example
-$ DOCKER_BUILD_PATH=ubuntu make docker
 ```
