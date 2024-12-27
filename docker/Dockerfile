@@ -1,4 +1,4 @@
-ARG UBUNTU_VERSION=latest
+ARG TERRAFORM_VERSION=latest
 
 
 # builder
