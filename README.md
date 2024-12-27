@@ -60,7 +60,7 @@ Published images can be run using the following syntax
 
 ```
 # run latest published version
-$ docker run -it --rm hansohn/terraform-digitalocean:latest /bin/bash
+docker run -it --rm hansohn/terraform-google:latest /bin/bash
 ```
 
 Local images can be built and run using the following syntax
@@ -99,10 +99,6 @@ matches your specific needs. Versions can be pinned by defining any of the follo
 environment variables with the desired version.
 
 - TERRAFORM_VERSION
-- TERRAGRUNT_VERSION
-- TERRAFORM_DOCS_VERSION
-- TFLINT_VERSION
-- TFSEC_VERSION
 
 ```bash
 # example
@@ -110,16 +106,4 @@ $ TERRAFORM_VERSION=0.15.5 make docker/build
 
 # example with logs pipped to console
 $ DOCKER_BUILDKIT=0 TERRAFORM_VERSION=0.15.5 make docker/build
-```
-
-#### Distros
-
-Currently, only Debian images are built and published to Docker Hub. Dockerfiles
-for both Alpine and Ubuntu distributions have also been included and can be built
-ad-hoc by setting the `DOCKER_BUILD_PATH` environment variable to target either
-of these alternative distro builds.
-
-```
-# example
-$ DOCKER_BUILD_PATH=ubuntu make docker
 ```
