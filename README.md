@@ -4,20 +4,16 @@
   <p>
     <!-- Build Status -->
     <a style="text-decoration:none;" class="imageLink" href="https://github.com/hansohn/terraform-aws-docker/actions/workflows/docker.yml">
-      <img src="https://img.shields.io/github/actions/workflow/status/hansohn/terraform-google-docker/docker.yml?style=for-the-badge">
-    </a>
+      <img src="https://img.shields.io/github/actions/workflow/status/hansohn/terraform-google-docker/docker.yml?style=for-the-badge"></a>
     <!-- Github Tag -->
     <a style="text-decoration:none;" class="imageLink" href="https://gitHub.com/hansohn/terraform-google-docker/tags/">
-      <img src="https://img.shields.io/github/tag/hansohn/terraform-google-docker.svg?style=for-the-badge">
-    </a>
+      <img src="https://img.shields.io/github/tag/hansohn/terraform-google-docker.svg?style=for-the-badge"></a>
     <!-- License -->
     <a style="text-decoration:none;" class="imageLink" href="https://github.com/hansohn/terraform-google-docker/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/hansohn/terraform-google-docker.svg?style=for-the-badge">
-    </a>
+      <img src="https://img.shields.io/github/license/hansohn/terraform-google-docker.svg?style=for-the-badge"></a>
     <!-- LinkedIn -->
     <a style="text-decoration:none;" class="imageLink" href="https://linkedin.com/in/ryanhansohn">
-      <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555">
-    </a>
+      <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555"></a>
   </p>
 </div>
 
