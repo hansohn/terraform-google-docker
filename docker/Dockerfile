@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
       curl \
       jq \
       libc6 \
+      python3 \
       unzip
 
 # tflint
@@ -23,7 +24,7 @@ RUN /bin/bash -c 'TFLINT_GOOGLE_VERSION=$(${CURL} "https://api.github.com/repos/
       && tflint --init'
 
 # gcloud cli
-RUN /bin/bash -c 'ARCH=$(uname -m | sed -re "s/(arm)64/\1/g") \
+RUN /bin/bash -c 'ARCH=$(uname -m) && if [[ "$ARCH" =~ ^(arm|aarch).* ]]; then ARCH="arm"; fi \
       && if [[ "${GCLOUD_CLI_VERSION}" == "latest" ]]; then GCLOUD_CLI_VERSION=$(${CURL} "https://raw.githubusercontent.com/google-github-actions/setup-cloud-sdk/main/data/versions.json" | jq -r "last"); fi \
       && ${CURL} https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-${GCLOUD_CLI_VERSION}-linux-${ARCH}.tar.gz -o google-cloud-cli-${GCLOUD_CLI_VERSION}-linux-${ARCH}.tar.gz \
       && mkdir /usr/local/google-cloud-sdk \
@@ -42,6 +43,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
       ca-certificates \
       git \
       jq \
+      python3 \
       unzip \
       vim \
       && apt-get clean \
