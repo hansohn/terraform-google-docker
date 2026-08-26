@@ -8,7 +8,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 # renovate: datasource=github-releases depName=terraform-linters/tflint-ruleset-google extractVersion=^v(?<version>.+)$
 ARG TFLINT_GOOGLE_VERSION=0.39.0
 # renovate: datasource=docker depName=gcr.io/google.com/cloudsdktool/google-cloud-cli
-ARG GCLOUD_CLI_VERSION=581.0.0
+ARG GCLOUD_CLI_VERSION=582.0.0
 ENV CURL='curl -fsSL'
 ENV CACHE_DIR='/var/cache/github-api'
 # The gcloud installer is a Python program and the arm64 bundle ships without a
