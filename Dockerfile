@@ -6,7 +6,7 @@ ARG TERRAFORM_VERSION=1.16.2
 FROM hansohn/terraform:${TERRAFORM_VERSION} AS builder
 ARG DEBIAN_FRONTEND=noninteractive
 # renovate: datasource=github-releases depName=terraform-linters/tflint-ruleset-google extractVersion=^v(?<version>.+)$
-ARG TFLINT_GOOGLE_VERSION=0.39.0
+ARG TFLINT_GOOGLE_VERSION=0.40.0
 # renovate: datasource=docker depName=gcr.io/google.com/cloudsdktool/google-cloud-cli
 ARG GCLOUD_CLI_VERSION=585.0.0
 ENV CURL='curl -fsSL'
